@@ -56,20 +56,13 @@ class Order {
       isTokenPayment;
 
   PaymentIntent? paymentIntent;
-
   PaymentMethod? paymentMethod;
-
   StatementDescriptor? statementDescriptor;
-
   List<Transaction>? transactions;
 
-<<<<<<< HEAD
   dynamic integrationType, items;
-
   Summary? summary;
 
-=======
->>>>>>> 445f820785e75cf2f3e22ac161827e3eab9d3222
   Order({
     this.amount,
     this.tipAmount,
@@ -120,35 +113,19 @@ class Order {
     this.transactions,
     this.orderStatus,
     this.paymentIntentId,
-<<<<<<< HEAD
     this.integrationType,
     this.items,
     this.summary,
-=======
->>>>>>> 445f820785e75cf2f3e22ac161827e3eab9d3222
   });
 
   Order.fromMap(Map<String, dynamic> map) {
-    amount =
-        map['amount'] == null ? null : double.parse(map['amount'].toString());
-    tipAmount = map['tipAmount'] == null
-        ? null
-        : double.parse(map['tipAmount'].toString());
-    convenienceFeeAmount = map['convenienceFeeAmount'] == null
-        ? null
-        : double.parse(map['convenienceFeeAmount'].toString());
-    totalAmount = map['totalAmount'] == null
-        ? null
-        : double.parse(map['totalAmount'].toString());
-    totalAuthorizedAmount = map['totalAuthorizedAmount'] == null
-        ? null
-        : double.parse(map['totalAuthorizedAmount'].toString());
-    totalCapturedAmount = map['totalCapturedAmount'] == null
-        ? null
-        : double.parse(map['totalCapturedAmount'].toString());
-    totalRefundedAmount = map['totalRefundedAmount'] == null
-        ? null
-        : double.parse(map['totalRefundedAmount'].toString());
+    amount = map['amount'] == null ? null : double.parse(map['amount'].toString());
+    tipAmount = map['tipAmount'] == null ? null : double.parse(map['tipAmount'].toString());
+    convenienceFeeAmount = map['convenienceFeeAmount'] == null ? null : double.parse(map['convenienceFeeAmount'].toString());
+    totalAmount = map['totalAmount'] == null ? null : double.parse(map['totalAmount'].toString());
+    totalAuthorizedAmount = map['totalAuthorizedAmount'] == null ? null : double.parse(map['totalAuthorizedAmount'].toString());
+    totalCapturedAmount = map['totalCapturedAmount'] == null ? null : double.parse(map['totalCapturedAmount'].toString());
+    totalRefundedAmount = map['totalRefundedAmount'] == null ? null : double.parse(map['totalRefundedAmount'].toString());
     orderId = map['orderId'];
     currency = map['currency'];
     language = map['language'];
@@ -180,36 +157,20 @@ class Order {
     updatedBy = map['updatedBy'];
     orderStatus = map['orderStatus'];
     paymentIntentId = map['paymentIntentId'];
-    billingAddress = map['billingAddress'] != null
-        ? Address.fromMap(map['billingAddress'])
-        : null;
-    shippingAddress = map['shippingAddress'] != null
-        ? Address.fromMap(map['shippingAddress'])
-        : null;
+    billingAddress = map['billingAddress'] != null ? Address.fromMap(map['billingAddress']) : null;
+    shippingAddress = map['shippingAddress'] != null ? Address.fromMap(map['shippingAddress']) : null;
     cardOnFile = map['cardOnFile'];
     setDefaultPaymentMethod = map['setDefaultPaymentMethod'];
     restrictPaymentMethods = map['restrictPaymentMethods'];
     createCustomer = map['createCustomer'];
     isTokenPayment = map['isTokenPayment'];
-    paymentIntent = map['paymentIntent'] == null
-        ? null
-        : PaymentIntent.fromMap(map['paymentIntent']);
-    paymentMethod = map['paymentMethod'] == null
-        ? null
-        : PaymentMethod.fromMap(map['paymentMethod']);
-    statementDescriptor = map['statementDescriptor'] == null
-        ? null
-        : StatementDescriptor.fromMap(map['statementDescriptor']);
-    transactions = map['transactions'] == null
-        ? null
-        : List<Transaction>.from(
-            map['transactions'].map((x) => Transaction.fromMap(x)));
-<<<<<<< HEAD
+    paymentIntent = map['paymentIntent'] == null ? null : PaymentIntent.fromMap(map['paymentIntent']);
+    paymentMethod = map['paymentMethod'] == null ? null : PaymentMethod.fromMap(map['paymentMethod']);
+    statementDescriptor = map['statementDescriptor'] == null ? null : StatementDescriptor.fromMap(map['statementDescriptor']);
+    transactions = map['transactions'] == null ? null : List<Transaction>.from(map['transactions'].map((x) => Transaction.fromMap(x)));
     integrationType = map['integrationType'];
     items = map['items'];
     summary = map['summary'] == null ? null : Summary.fromMap(map['summary']);
-=======
->>>>>>> 445f820785e75cf2f3e22ac161827e3eab9d3222
   }
 
   @override
@@ -268,16 +229,10 @@ class Order {
       "paymentIntent": paymentIntent?.toMap(),
       "paymentMethod": paymentMethod?.toMap(),
       "statementDescriptor": statementDescriptor?.toMap(),
-      "transactions": (transactions != null)
-          ? transactions?.map((v) => v.toMap()).toList()
-<<<<<<< HEAD
-          : null,
+      "transactions": (transactions != null) ? transactions?.map((v) => v.toMap()).toList() : null,
       "integrationType": integrationType,
       "items": items,
       "summary": summary?.toMap(),
-=======
-          : null
->>>>>>> 445f820785e75cf2f3e22ac161827e3eab9d3222
     };
   }
 }
