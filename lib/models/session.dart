@@ -62,50 +62,45 @@ class Session extends BaseRequestBody {
     this.metadata,
   );
 
-  Session.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    amount = json['amount'];
-    currency = json['currency'];
-    callbackUrl = json['callbackUrl'];
-    returnUrl = json['returnUrl'];
-    expiryDate = json['expiryDate'];
-    status = json['status'];
-    merchantId = json['merchantId'];
-    merchantPublicKey = json['merchantPublicKey'];
-    language = json['language'];
-    merchantReferenceId = json['merchantReferenceId'];
-    paymentIntentId = json['paymentIntentId'];
-    paymentOperation = json['paymentOperation'];
-    cardOnFile = json['cardOnFile'];
-    cofAgreement = json['cofAgreement'] != null
-        ? CofAgreement.fromJson(json['cofAgreement'])
-        : null;
-    initiatedBy = json['initiatedBy'];
-    tokenId = json['tokenId'];
-    customer = json['customer'];
-    platform =
-        json['platform'] != null ? Platform.fromJson(json['platform']) : null;
-    paymentOptions = json['paymentOptions'];
-    recurrence = json['recurrence'];
-<<<<<<< HEAD
-    order = json['order'] != null
-        ? Order.fromMap(json['order'])
-        : null;
-=======
-    order = null;
-    // order = json['order'];
->>>>>>> 445f820785e75cf2f3e22ac161827e3eab9d3222
-    items = json['items'];
-    appearance = json['appearance'] != null
-        ? Appearance.fromJson(json['appearance'])
-        : null;
-    metadata =
-        json['metadata'] != null ? Metadata.fromJson(json['metadata']) : null;
-    paymentMethod = json['paymentMethod'] != null
-        ? PaymentMethod.fromMap(json['paymentMethod'])
-        : null;
-    subscription = json['subscription'];
-  }
+ Session.fromJson(Map<String, dynamic> json) {
+  id = json['id'];
+  amount = json['amount'];
+  currency = json['currency'];
+  callbackUrl = json['callbackUrl'];
+  returnUrl = json['returnUrl'];
+  expiryDate = json['expiryDate'];
+  status = json['status'];
+  merchantId = json['merchantId'];
+  merchantPublicKey = json['merchantPublicKey'];
+  language = json['language'];
+  merchantReferenceId = json['merchantReferenceId'];
+  paymentIntentId = json['paymentIntentId'];
+  paymentOperation = json['paymentOperation'];
+  cardOnFile = json['cardOnFile'];
+  cofAgreement = json['cofAgreement'] != null
+      ? CofAgreement.fromJson(json['cofAgreement'])
+      : null;
+  initiatedBy = json['initiatedBy'];
+  tokenId = json['tokenId'];
+  customer = json['customer'];
+  platform =
+      json['platform'] != null ? Platform.fromJson(json['platform']) : null;
+  paymentOptions = json['paymentOptions'];
+  recurrence = json['recurrence'];
+  
+  // Handling the order field
+  order = json['order'] != null ? Order.fromMap(json['order']) : null;
+  
+  items = json['items'];
+  appearance = json['appearance'] != null
+      ? Appearance.fromJson(json['appearance'])
+      : null;
+  metadata = json['metadata'] != null ? Metadata.fromJson(json['metadata']) : null;
+  paymentMethod = json['paymentMethod'] != null
+      ? PaymentMethod.fromMap(json['paymentMethod'])
+      : null;
+  subscription = json['subscription'];
+}
 
   @override
   String toString() {
