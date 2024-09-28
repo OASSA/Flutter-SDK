@@ -229,8 +229,7 @@ class CreditCardScreenState extends State<CreditCardScreen> {
                                         borderRadius:
                                             BorderRadius.circular(8.0),
                                       ),
-                                      primary:
-                                          widget.checkoutOptions.payButtonColor,
+                                       backgroundColor: Theme.of(context).colorScheme.primary,
                                     ),
                                     child: Container(
                                       margin: const EdgeInsets.all(12),
@@ -282,8 +281,7 @@ class CreditCardScreenState extends State<CreditCardScreen> {
                                         borderRadius:
                                             BorderRadius.circular(8.0),
                                       ),
-                                      primary: widget
-                                          .checkoutOptions.cancelButtonColor,
+                                      backgroundColor: Theme.of(context).colorScheme.primary,
                                     ),
                                     child: Container(
                                       margin: const EdgeInsets.all(12),
@@ -850,8 +848,7 @@ class CreditCardScreenState extends State<CreditCardScreen> {
                                         borderRadius:
                                             BorderRadius.circular(8.0),
                                       ),
-                                      primary:
-                                          widget.checkoutOptions.payButtonColor,
+                                      backgroundColor: Theme.of(context).colorScheme.primary,
                                     ),
                                     child: Container(
                                       margin: const EdgeInsets.all(12),
@@ -911,8 +908,7 @@ class CreditCardScreenState extends State<CreditCardScreen> {
                                         borderRadius:
                                             BorderRadius.circular(8.0),
                                       ),
-                                      primary: widget
-                                          .checkoutOptions.cancelButtonColor,
+                                      backgroundColor: Theme.of(context).colorScheme.primary,
                                     ),
                                     child: Container(
                                       margin: const EdgeInsets.all(12),
